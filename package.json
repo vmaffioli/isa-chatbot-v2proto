@@ -1,0 +1,30 @@
+{
+  "name": "isa-chatbot",
+  "version": "1.0.0",
+  "description": "javascript chatbot kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmaffioli/isa-chatbot.git"
+  },
+  "keywords": [
+    "chatbot",
+    "isa",
+    "is",
+    "a",
+    "chat",
+    "bot",
+    "kit",
+    "javascript",
+    "js"
+  ],
+  "author": "vmaffioli <vinimaffioli@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vmaffioli/isa-chatbot/issues"
+  },
+  "homepage": "https://github.com/vmaffioli/isa-chatbot#readme"
+}
