@@ -10,7 +10,6 @@ exports.str = (str) => {    // analyze strings
         type: ""
     }
 
-
     //  ------------- defining types  ----------- //
     if(str.includes("?")) {  // isA question
         str.replace("?","")
@@ -18,8 +17,6 @@ exports.str = (str) => {    // analyze strings
     } else {
         conclusion.type = "affirmation" //isA affirmation
     }
-
-
 
     //  ------------- convert to lower case  ----------- //
     str  = str.toLowerCase();
@@ -39,7 +36,7 @@ exports.str = (str) => {    // analyze strings
         str = str.replace(expressaoRegular, letra);
     };
 
-    //  -------------  split str  ----------- //
+    //  -------------  split str and save  ----------- //
     conclusion.words = str.split(" ");
 
 

@@ -1,35 +1,38 @@
 const parse = require('./src/parser');
 
 
+//  -------------  declaration area ----------- //
+let original_message, parsed_message, parsed_image;
 
 
-//  -------------  node - get user input ----------- //
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+//  -------------  inputs for test ----------- //
 
-readline.question('Ask me something: ', msg => {
+const inputs = [
+    "Você consegue Me responder?",
+    "teste de AFIRMAçÃO com, Virgula e excamaÇÂO!"
+]
 
-    //  -------------  declaration area ----------- //
-    const original_message = msg
+original_message = inputs[0]
 
-
-    //  -------------  memorize things ----------- //
-    require('./src/receive').save(msg);
+//  -------------  memorize things ----------- //
 
 
-    //  -------------  outputs ----------- //
-    console.log("-------------  outputs -----------")
-
-    console.log(original_message)
-    console.log(parse.str(msg));
-
-    console.log("-------------  end of outputs -----------")
-
-    readline.close();
-});
+//database call here - intial mysql and mongodb.
+// needs initial configuration
 
 
+//  -------------  parser call ----------- //
+parsed_message = parse.str(original_message) // string
+//parsed_image = parse.img(original_message) // image
+
+
+
+//  -------------  outputs ----------- //
+console.log("-------------  outputs -----------")
+
+console.log(original_message)
+console.log(parsed_message);
+
+console.log("-------------  end of outputs -----------")
 
 
