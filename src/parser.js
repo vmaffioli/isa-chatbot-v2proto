@@ -2,7 +2,7 @@
 
 
 
-exports.str = (str) => {    // analyze strings
+module.exports = (str) => {    // analyze strings
 
     //  ------------- declarations  ----------- //
     let conclusion = {
@@ -12,7 +12,7 @@ exports.str = (str) => {    // analyze strings
 
     //  ------------- defining types  ----------- //
     if(str.includes("?")) {  // isA question
-        str.replace("?","")
+        str = str.replaceAll("?","")
         conclusion.type = "question"
     } else {
         conclusion.type = "affirmation" //isA affirmation
@@ -28,13 +28,14 @@ exports.str = (str) => {    // analyze strings
         i: /[\xEC-\xEF]/g,
         o: /[\xF2-\xF6]/g,
         u: /[\xF9-\xFC]/g,
-        c: /\xE7/g,
+        //c: /\xE7/g,
         n: /\xF1/g
     };
     for (let letra in mapaAcentosHex) {
         let expressaoRegular = mapaAcentosHex[letra];
         str = str.replace(expressaoRegular, letra);
     };
+    str = str.replace(/[^a-zA-Z ]/g, "");
 
     //  -------------  split str and save  ----------- //
     conclusion.words = str.split(" ");

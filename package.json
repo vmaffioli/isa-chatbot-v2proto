@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/vmaffioli/isa-chatbot/issues"
   },
-  "homepage": "https://github.com/vmaffioli/isa-chatbot#readme"
+  "homepage": "https://github.com/vmaffioli/isa-chatbot#readme",
+  "dependencies": {
+    "about-words": "^1.0.3"
+  }
 }
